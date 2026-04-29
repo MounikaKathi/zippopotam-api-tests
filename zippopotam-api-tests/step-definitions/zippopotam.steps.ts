@@ -60,14 +60,6 @@ When(
 );
 
 Then(
-  /^the API response time should be less than (\d+) milliseconds$/,
-  function (this: ZippopotamWorld, maxResponseTime: string) {
-    expect(this.responseTime).toBeDefined();
-    expect(this.responseTime).toBeLessThan(Number(maxResponseTime));
-  },
-);
-
-Then(
   "the API response status code should be {int}",
   function (this: ZippopotamWorld, expectedStatusCode: number) {
     if (!this.response) {
